@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
-import 'secondroute.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
-    home: FirstRoute(),
+    home: SecondRoute(),
   ));
 }
 
-class FirstRoute extends StatelessWidget {
+class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Route'),
+        title: Text("Second Route"),
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text('Open route'),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondRoute()),
-            );
+            Navigator.pop(context);
           },
+          child: Text('Go back!'),
         ),
       ),
     );
