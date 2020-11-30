@@ -15,11 +15,17 @@ class SecondRoute extends StatelessWidget {
         title: Text("Second Route"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+        child: Column(
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Entrez votre montant',
+                labelText: 'Entrez votre montant'
+              ),
+              keyboardType: TextInputType.number,
+            ),
+          ]
         ),
       ),
     );
