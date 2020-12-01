@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'PaiementAccepte.dart';
+import 'main.dart';
 
 class ImageContactLess extends StatelessWidget {
   final String montant;
@@ -10,7 +11,7 @@ class ImageContactLess extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Projet Initation Dev Web'),
+        title: Text('Paiement'),
       ),
       body: SafeArea(
         child: Row(
@@ -46,6 +47,9 @@ class ImageContactLess extends StatelessWidget {
                             context,
                             MaterialPageRoute(builder: (context) => Paiement()),
                           );
+                          Future.delayed(Duration(seconds: 2), () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => FirstRoute()));
+                          });
                         },
                       )
                     ]
