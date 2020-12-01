@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
+import 'imageSC.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -94,8 +95,10 @@ class MontantFormState extends State<MontantForm> {
                 // otherwise.
                 if (_formKey.currentState.validate()) {
                   // If the form is valid, display a Snackbar.
-                  Scaffold.of(context)
-                      .showSnackBar(SnackBar(content: Text('Processing Data')));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ImageContactLess()),
+                  );
                 }
               },
               child: Text('Valider'),

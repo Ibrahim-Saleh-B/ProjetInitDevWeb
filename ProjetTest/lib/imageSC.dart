@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'PaiementAccepte.dart';
 
-void main() => runApp(Image());
+void main() => runApp(ImageContactLess());
 
-class Image extends StatelessWidget {
+class ImageContactLess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('Projet Initation Dev Web'),
-          automaticallyImplyLeading: true,
         ),
         body: IconButton(
             iconSize: 350.0,
@@ -24,7 +22,6 @@ class Image extends StatelessWidget {
               );
             },
           ),
-      ),
     );
   }
 }

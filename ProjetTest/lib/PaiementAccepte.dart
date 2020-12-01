@@ -14,6 +14,8 @@ class Paiement extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Projet Initation Dev Web'),
+        automaticallyImplyLeading: false
+
       ),
       body: Center(
         child : Text(

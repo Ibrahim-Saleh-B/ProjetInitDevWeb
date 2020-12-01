@@ -13,7 +13,6 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Profile"),
-        automaticallyImplyLeading: true
       ),
       backgroundColor: Colors.cyan[800],
       body: SafeArea(
