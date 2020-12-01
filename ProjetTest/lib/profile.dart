@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Navigation Basics',
-    home: Profile(),
-  ));
-}
 
 class Profile extends StatelessWidget {
   @override

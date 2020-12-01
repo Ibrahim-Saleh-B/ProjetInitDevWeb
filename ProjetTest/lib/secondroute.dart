@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 import 'profile.dart';
 import 'imageSC.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Navigation Basics',
-    home: SecondRoute(),
-  ));
-}
-
 class SecondRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -59,7 +52,8 @@ class MontantFormState extends State<MontantForm> {
   // Note: This is a GlobalKey<FormState>,
   // not a GlobalKey<MyCustomFormState>.
   final _formKey = GlobalKey<FormState>();
-
+  String montant;
+  
   @override
   Widget build(BuildContext context) {
     // Build a Form widget using the _formKey created above.
@@ -78,6 +72,9 @@ class MontantFormState extends State<MontantForm> {
                 hintText: 'Entrez votre montant',
                 hintStyle: TextStyle(height:2),
               ),
+            onChanged: (value) {
+              montant = value;
+            },
             textAlign: TextAlign.center,
             keyboardType: TextInputType.number,
             validator: (value) {
@@ -97,7 +94,7 @@ class MontantFormState extends State<MontantForm> {
                   // If the form is valid, display a Snackbar.
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ImageContactLess()),
+                    MaterialPageRoute(builder: (context) => ImageContactLess(montant)),
                   );
                 }
               },
@@ -109,13 +106,3 @@ class MontantFormState extends State<MontantForm> {
     );
   }
 }
-/*
-TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Entrez votre montant',
-                labelText: 'Entrez votre montant'
-              ),
-              keyboardType: TextInputType.number,
-            ),
-*/

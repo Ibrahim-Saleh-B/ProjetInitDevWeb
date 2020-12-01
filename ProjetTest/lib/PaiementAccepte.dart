@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: 'Navigation Basics',
-    home: Paiement(),
-  ));
-}
 
 class Paiement extends StatelessWidget {
   @override
