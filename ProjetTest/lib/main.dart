@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'secondroute.dart';
+import 'profile.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,6 +15,19 @@ class FirstRoute extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('First Route'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.account_circle_outlined
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Profile()),
+              );
+            },
+          ),
+        ],
       ),
       body: Center(
         child: ElevatedButton(
