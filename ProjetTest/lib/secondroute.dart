@@ -7,7 +7,14 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Route"),
+         title:Text('Montant', 
+                  style: TextStyle
+                    (
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+      backgroundColor: Colors.black,
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -86,7 +93,7 @@ class MontantFormState extends State<MontantForm> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: ElevatedButton(
+            child: RaisedButton(
               onPressed: () {
                 // Validate returns true if the form is valid, or false
                 // otherwise.
@@ -98,7 +105,14 @@ class MontantFormState extends State<MontantForm> {
                   );
                 }
               },
-              child: Text('Valider'),
+              child: Text('Valider', 
+                        style: TextStyle
+                        (
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    ),
+                    color : Colors.black,
             ),
           ),
         ],

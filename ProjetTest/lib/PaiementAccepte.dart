@@ -7,7 +7,14 @@ class Paiement extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Projet Initation Dev Web'),
+        title:Text('Paiement accepté', 
+                  style: TextStyle
+                    (
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+      backgroundColor: Colors.black,
         automaticallyImplyLeading: false
 
       ),
@@ -25,9 +32,15 @@ class Paiement extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                ElevatedButton
-                (
-                  child: Text('Retour à l\'accueil'),
+                RaisedButton(
+                    child: Text('Appuyez pour revenir à l\'accueil', 
+                        style: TextStyle
+                        (
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    ),
+                    color : Colors.black,
                   onPressed: () {
                     Navigator.push(
                     context, MaterialPageRoute(builder: (context) => FirstRoute()),

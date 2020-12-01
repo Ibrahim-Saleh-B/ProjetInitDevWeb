@@ -10,7 +10,14 @@ class ImageContactLess extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Projet Initation Dev Web'),
+        title:Text('Paiement', 
+                  style: TextStyle
+                    (
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+      backgroundColor: Colors.black,
       ),
       body: SafeArea(
         child: Row(
