@@ -14,7 +14,6 @@ class Profile extends StatelessWidget {
       appBar: AppBar(
         title: Text("Profile"),
       ),
-      backgroundColor: Colors.cyan[800],
       body: SafeArea(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -82,7 +82,7 @@ class MontantFormState extends State<MontantForm> {
             keyboardType: TextInputType.number,
             validator: (value) {
               if (value.isEmpty) {
-                return 'Veuillez entrer un montant un montant';
+                return 'Veuillez entrer un montant';
               }
               return null;
             },
