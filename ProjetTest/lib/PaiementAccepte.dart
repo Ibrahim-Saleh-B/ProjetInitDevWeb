@@ -15,7 +15,7 @@ class Paiement extends StatelessWidget {
                     ),
                   ),
       backgroundColor: Colors.black,
-        automaticallyImplyLeading: false
+      automaticallyImplyLeading: false
 
       ),
       body: Center( 
