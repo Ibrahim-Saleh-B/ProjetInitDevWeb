@@ -14,7 +14,7 @@ class FirstRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Route'),
+        title: Text('Projet Init Dev Web'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
