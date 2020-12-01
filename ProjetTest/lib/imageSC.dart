@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'PaiementAccepte.dart';
 
-void main() => runApp(ImageContactLess());
-
 class ImageContactLess extends StatelessWidget {
+  final String montant;
+
+  ImageContactLess(this.montant);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,17 +19,32 @@ class ImageContactLess extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                  iconSize: 350.0,
-                  icon: Icon(
-                    Icons.contactless_outlined
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Montant à régler : '+montant,style: TextStyle(fontFamily: 'Roboto',fontSize: 40,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold)),
+                        SizedBox(width:10),
+                        Icon(
+                          Icons.euro,
+                          size: 50.0,
+                        ),
+                      ]
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Paiement()),
-                    );
-                  },
+                ),
+                Container(
+                  child: IconButton(
+                    iconSize: 350.0,
+                    icon: Icon(
+                      Icons.contactless_outlined
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Paiement()),
+                      );
+                    },
+                  )
                 )
               ],
             ),
