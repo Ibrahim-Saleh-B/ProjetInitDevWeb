@@ -1,3 +1,4 @@
+import 'package:ProjetTest/main.dart';
 import 'package:flutter/material.dart';
 
 
@@ -10,16 +11,32 @@ class Paiement extends StatelessWidget {
         automaticallyImplyLeading: false
 
       ),
-      body: Center(
-        child : Text(
-          'Paiement Accepté',
-          style: TextStyle(
-              fontSize : 40.0,
-              color: Colors.green,
-              fontWeight: FontWeight.bold,
-          ),
+      body: Center( 
+          child : Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+               Text
+               (
+                  'Paiement Accepté',
+                  style: TextStyle
+                  (
+                    fontSize : 40.0,
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ElevatedButton
+                (
+                  child: Text('Retour à l\'accueil'),
+                  onPressed: () {
+                    Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => FirstRoute()),
+                    );
+                  },
+                ),              
+              ],
+            ),
         ),
-      ),
     );
   }
 }
